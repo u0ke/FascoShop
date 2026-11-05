@@ -1,0 +1,4 @@
+.sale-text {
+    transform: scaleX(0.84);
+    -webkit-text-stroke: 1px #777;
+}
