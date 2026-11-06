@@ -6,13 +6,9 @@
     <meta name="theme-color" content="#ffffff">
     <title>FASCO - Fashion Store</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style/style.css">
 </head>
 
@@ -30,32 +26,23 @@
             <a class="signup-link" href="#signup">Sign Up</a>
         </nav>
 
-        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
-            ☰
-        </button>
+        <button class="menu-toggle" id="menuToggle" type="button"
+            aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">☰</button>
     </header>
 
     <main>
         <!-- Section 1: Hero -->
         <section class="hero-wrap page-width" id="top" aria-label="New collection">
             <div class="hero-grid">
-                <!-- Left image -->
                 <div class="side-image">
-                    <img
-                        src="/assets/home/59866250d2fc5a879ffcc793dc57565cb166bdcd.png"
-                        alt="Men's fashion collection"
-                        fetchpriority="high"
-                    >
+                    <img src="/assets/home/59866250d2fc5a879ffcc793dc57565cb166bdcd.png"
+                        alt="Men's fashion collection" fetchpriority="high">
                 </div>
 
-                <!-- Center column -->
                 <div class="center-column">
                     <div class="center-image">
-                        <img
-                            src="/assets/home/63152539556c7ef09daff7f0e836524aaf0d723f.png"
-                            alt="Four models wearing the women's collection"
-                            fetchpriority="high"
-                        >
+                        <img src="/assets/home/63152539556c7ef09daff7f0e836524aaf0d723f.png"
+                            alt="Four models wearing the women's collection" fetchpriority="high">
                     </div>
 
                     <div class="sale-content">
@@ -66,36 +53,32 @@
                     </div>
 
                     <div class="center-image">
-                        <img
-                            src="/assets/home/c6ed7b8b05275d0c4f047ca38e286565bc785434.jpg"
-                            alt="Two women from the new collection"
-                            fetchpriority="high"
-                        >
+                        <img src="/assets/home/c6ed7b8b05275d0c4f047ca38e286565bc785434.jpg"
+                            alt="Two women from the new collection" fetchpriority="high">
                     </div>
                 </div>
 
-                <!-- Right image -->
                 <div class="side-image">
-                    <img
-                        src="/assets/home/f5c95fe473850a225b7cfa1222bf5117db038cb6.png"
-                        alt="Men's fashion collection"
-                        fetchpriority="high"
-                    >
+                    <img src="/assets/home/f5c95fe473850a225b7cfa1222bf5117db038cb6.png"
+                        alt="Men's fashion collection" fetchpriority="high">
                 </div>
             </div>
-
-            <!-- Hero floating controls -->
-            <div class="hero-actions">
-                <button class="hero-action-button" type="button" aria-label="Shopping cart">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 8H6"></path>
-                        <circle cx="10" cy="21" r="1"></circle>
-                        <circle cx="19" cy="21" r="1"></circle>
-                    </svg>
-                </button>
-                <button class="hero-action-button back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
-            </div>
         </section>
+
+        <!-- Floating controls -->
+        <div class="hero-actions">
+            <button class="hero-action-button" type="button" aria-label="Shopping cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 8H6"></path>
+                    <circle cx="10" cy="21" r="1"></circle>
+                    <circle cx="19" cy="21" r="1"></circle>
+                </svg>
+            </button>
+            <button class="hero-action-button back-to-top" id="backToTop" type="button"
+                aria-label="Back to top">↑</button>
+        </div>
 
         <!-- Brand strip -->
         <section class="brand-strip page-width" aria-label="Featured brands">
@@ -108,21 +91,16 @@
 
         <!-- Section 2: Deals Of The Month -->
         <section class="deals-section" id="deals" aria-labelledby="dealsTitle">
-            <!-- Left content -->
             <div class="deals-copy">
                 <h2 id="dealsTitle">Deals Of The Month</h2>
-
                 <p class="deals-description">
                     Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit. Scelerisque duis ultrices sollicitudin aliquam sem.
                     Scelerisque duis ultrices sollicitudin
                 </p>
-
                 <a class="deals-buy-button" href="#dealsProducts">Buy Now</a>
 
                 <h3 class="countdown-title">Hurry, Before It's Too Late!</h3>
-
-                <!-- Static example values to match the supplied reference screenshot. -->
                 <div class="countdown" aria-label="Sale countdown example">
                     <div class="countdown-item">
                         <div class="countdown-number">02</div>
@@ -143,52 +121,31 @@
                 </div>
             </div>
 
-            <!-- Product carousel. Replace each data-URI src with your own image path. -->
+            <!-- Add your image src values to the four img elements below. -->
             <div class="deals-carousel-window" id="dealsCarousel" aria-label="Monthly deals products">
                 <div class="deals-track" id="dealsTrack">
-                    <!-- Featured product image placeholder -->
                     <article class="deal-card deal-featured" id="dealsProducts">
-                        <img
-                            class="deal-photo"
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 222 320'%3E%3Crect width='222' height='320' fill='%23dedbd3'/%3E%3C/svg%3E"
-                            alt="Add the featured spring sale product image"
-                        >
+                        <img class="deal-photo" alt="Featured spring sale product">
                         <div class="deal-discount">
                             <p class="deal-discount-label">01 &nbsp; — &nbsp; Spring Sale</p>
                             <p class="deal-discount-value">30% OFF</p>
                         </div>
                     </article>
 
-                    <!-- Product image placeholder 2 -->
                     <article class="deal-card deal-small">
-                        <img
-                            class="deal-photo"
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 204 267'%3E%3Crect width='204' height='267' fill='%23e8e8ed'/%3E%3C/svg%3E"
-                            alt="Add the second deal product image"
-                        >
+                        <img class="deal-photo" alt="Second deal product">
                     </article>
 
-                    <!-- Product image placeholder 3 -->
                     <article class="deal-card deal-small">
-                        <img
-                            class="deal-photo"
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 204 267'%3E%3Crect width='204' height='267' fill='%23c7b7b8'/%3E%3C/svg%3E"
-                            alt="Add the third deal product image"
-                        >
+                        <img class="deal-photo" alt="Third deal product">
                     </article>
 
-                    <!-- Product image placeholder 4 -->
                     <article class="deal-card deal-small">
-                        <img
-                            class="deal-photo"
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 204 267'%3E%3Crect width='204' height='267' fill='%23e8e8ed'/%3E%3C/svg%3E"
-                            alt="Add the fourth deal product image"
-                        >
+                        <img class="deal-photo" alt="Fourth deal product">
                     </article>
                 </div>
             </div>
 
-            <!-- Carousel arrows and pagination -->
             <div class="deals-controls">
                 <div class="deals-arrows">
                     <button class="deals-arrow" id="dealsPrev" type="button" aria-label="Previous products">‹</button>
@@ -205,5 +162,70 @@
         </section>
     </main>
 
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const siteNav = document.getElementById("siteNav");
+        const backToTop = document.getElementById("backToTop");
+        const dealsCarousel = document.getElementById("dealsCarousel");
+        const dealsTrack = document.getElementById("dealsTrack");
+        const dealCards = Array.from(dealsTrack.querySelectorAll(".deal-card"));
+        const dealDots = Array.from(document.querySelectorAll("[data-deal-dot]"));
+        const dealsPrev = document.getElementById("dealsPrev");
+        const dealsNext = document.getElementById("dealsNext");
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = siteNav.classList.toggle("is-open");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+        });
+
+        siteNav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                siteNav.classList.remove("is-open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open menu");
+            });
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        function scrollToDeal(index) {
+            const card = dealCards[index];
+            if (!card) return;
+
+            dealsCarousel.scrollTo({
+                left: card.offsetLeft,
+                behavior: "smooth"
+            });
+        }
+
+        function updateDealDots() {
+            const maxScroll = dealsCarousel.scrollWidth - dealsCarousel.clientWidth;
+            const progress = maxScroll > 0 ? dealsCarousel.scrollLeft / maxScroll : 0;
+            const activeIndex = Math.round(progress * (dealDots.length - 1));
+
+            dealDots.forEach((dot, index) => {
+                dot.setAttribute("aria-current", String(index === activeIndex));
+            });
+        }
+
+        dealsPrev.addEventListener("click", () => {
+            dealsCarousel.scrollBy({ left: -235, behavior: "smooth" });
+        });
+
+        dealsNext.addEventListener("click", () => {
+            dealsCarousel.scrollBy({ left: 235, behavior: "smooth" });
+        });
+
+        dealDots.forEach((dot, index) => {
+            dot.addEventListener("click", () => scrollToDeal(index));
+        });
+
+        dealsCarousel.addEventListener("scroll", updateDealDots, { passive: true });
+        window.addEventListener("resize", updateDealDots);
+        updateDealDots();
+    </script>
 </body>
 </html>
