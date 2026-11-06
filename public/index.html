@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -52,12 +54,9 @@
         <section class="grid grid-cols-1 gap-5 sm:grid-cols-3">
 
             <!-- Left Image -->
-            <div class="h-[570px] overflow-hidden rounded-lg bg-[#e0e0e0]">
-                <img
-                    src="/assets/home/59866250d2fc5a879ffcc793dc57565cb166bdcd.png"
-                    alt="Men's fashion collection"
-                    class="h-full w-full object-cover"
-                >
+            <div class="h-[570px]  overflow-hidden rounded-lg bg-[#e0e0e0]">
+                <img src="/assets/home/59866250d2fc5a879ffcc793dc57565cb166bdcd.png" alt="Men's fashion collection"
+                    class="h-full w-full object-cover">
             </div>
 
 
@@ -66,30 +65,28 @@
 
                 <!-- Top Image -->
                 <div class="h-[115px] overflow-hidden rounded-lg bg-[#e0e0e0]">
-                    <img
-                        src="/assets/home/63152539556c7ef09daff7f0e836524aaf0d723f.png"
-                        alt="Women's fashion collection"
-                        class="h-full w-full object-cover"
-                    >
+                    <img src="/assets/home/63152539556c7ef09daff7f0e836524aaf0d723f.png"
+                        alt="Women's fashion collection" class="h-full w-full object-cover">
                 </div>
 
                 <!-- Sale Text -->
                 <div class="flex flex-1 flex-col items-center justify-center text-center">
 
-                    <h1 class="text-[40px] font-semibold leading-tight tracking-tight">
+                    <h1 class="text-[48px] font-semibold leading-none tracking-tight">
                         ULTIMATE
                     </h1>
 
-                    <p class="text-[88px] font-normal leading-none tracking-tight text-transparent [-webkit-text-stroke:1px_#777]">
+                    <p class="whitespace-nowrap text-[88px] font-normal leading-[0.95] tracking-tight text-transparent"
+                        style="-webkit-text-stroke: 1px #777;">
                         SALE
                     </p>
 
-                    <p class="mt-3 text-[13px] font-medium tracking-[2px]">
+                    <p class="mt-2 text-[11px] font-medium tracking-[2px]">
                         NEW COLLECTION
                     </p>
 
                     <a href="#"
-                        class="mt-5 rounded-md bg-black px-11 py-3 text-[11px] text-white shadow-lg transition hover:bg-gray-800">
+                        class="mt-3 rounded-md bg-black px-8 py-2.5 text-[9px] font-medium text-white shadow-lg transition hover:bg-gray-800">
                         SHOP NOW
                     </a>
 
@@ -97,11 +94,8 @@
 
                 <!-- Bottom Image -->
                 <div class="h-[115px] overflow-hidden rounded-lg">
-                    <img
-                        src="/assets/home/c6ed7b8b05275d0c4f047ca38e286565bc785434.jpg"
-                        alt="Women's new collection"
-                        class="h-full w-full object-cover"
-                    >
+                    <img src="/assets/home/c6ed7b8b05275d0c4f047ca38e286565bc785434.jpg" alt="Women's new collection"
+                        class="h-full w-full object-cover">
                 </div>
 
             </div>
@@ -109,11 +103,8 @@
 
             <!-- Right Image -->
             <div class="h-[570px] overflow-hidden rounded-lg bg-[#e0e0e0]">
-                <img
-                    src="/assets/home/f5c95fe473850a225b7cfa1222bf5117db038cb6.png"
-                    alt="Men's fashion collection"
-                    class="h-full w-full object-cover"
-                >
+                <img src="/assets/home/f5c95fe473850a225b7cfa1222bf5117db038cb6.png" alt="Men's fashion collection"
+                    class="h-full w-full object-cover">
             </div>
 
         </section>
@@ -153,18 +144,16 @@
         <button aria-label="Shopping cart"
             class="flex h-11 w-11 items-center justify-center rounded-lg bg-black text-white shadow-xl">
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 8H6"/>
-                <circle cx="10" cy="21" r="1"/>
-                <circle cx="19" cy="21" r="1"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 8H6" />
+                <circle cx="10" cy="21" r="1" />
+                <circle cx="19" cy="21" r="1" />
             </svg>
 
         </button>
 
-        <button aria-label="Back to top"
-            onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+        <button aria-label="Back to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
             class="flex h-11 w-11 items-center justify-center rounded-full border border-gray-400 bg-white text-xl text-black">
 
             ↑
@@ -173,5 +162,185 @@
 
     </div>
 
+
+
+    <!-- Deals Of The Month -->
+    <section class="deals-section">
+
+        <!-- Left Content -->
+        <div class="deals-copy">
+
+            <h2 class="font-serif text-[27px] font-semibold leading-tight text-[#454545]">
+                Deals Of The Month
+            </h2>
+
+            <p class="mt-3 text-[9px] leading-[15px] text-gray-400">
+                Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Scelerisque duis ultrices sollicitudin aliquam sem.
+                Scelerisque duis ultrices sollicitudin
+            </p>
+
+            <a href="#"
+                class="mt-5 flex h-[31px] w-[114px] items-center justify-center rounded-md bg-black text-[9px] text-white shadow-lg transition hover:bg-gray-800">
+                Buy Now
+            </a>
+
+            <!-- Countdown -->
+            <h3 class="mt-7 text-[16px] font-semibold text-[#454545]">
+                Hurry, Before It's Too Late!
+            </h3>
+
+            <div class="mt-2 flex gap-3">
+
+                <div class="text-center">
+                    <div
+                        class="deals-timer flex h-[43px] w-[43px] items-center justify-center rounded-lg bg-white text-[23px] shadow-[0_3px_12px_rgba(0,0,0,0.13)]">
+                        02
+                    </div>
+                    <span class="mt-2 block text-[13px]">Days</span>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="deals-timer flex h-[43px] w-[43px] items-center justify-center rounded-lg bg-white text-[23px] shadow-[0_3px_12px_rgba(0,0,0,0.13)]">
+                        06
+                    </div>
+                    <span class="mt-2 block text-[13px]">Hr</span>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="deals-timer flex h-[43px] w-[43px] items-center justify-center rounded-lg bg-white text-[23px] shadow-[0_3px_12px_rgba(0,0,0,0.13)]">
+                        05
+                    </div>
+                    <span class="mt-2 block text-[13px]">Mins</span>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="deals-timer flex h-[43px] w-[43px] items-center justify-center rounded-lg bg-white text-[23px] shadow-[0_3px_12px_rgba(0,0,0,0.13)]">
+                        30
+                    </div>
+                    <span class="mt-2 block text-[13px]">Sec</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product Carousel -->
+        <div class="deals-carousel-window" id="dealsCarousel">
+
+            <div class="deals-track" id="dealsTrack">
+
+                <!-- Featured Product -->
+                <div class="deal-card deal-featured bg-[#dedbd3]">
+
+                    <img src="/assets/deals/deal-01.jpg" alt="Spring fashion collection">
+
+                    <!-- Discount Label -->
+                    <div class="absolute bottom-[14px] left-[13px] w-[119px] bg-white px-3 py-3 shadow-sm">
+
+                        <p class="text-[8px] text-gray-500">
+                            01 &nbsp; — &nbsp; Spring Sale
+                        </p>
+
+                        <p class="mt-1 text-[16px] font-medium">
+                            30% OFF
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Product 2 -->
+                <div class="deal-card deal-small bg-gray-100">
+
+                    <img src="/assets/deals/deal-02.jpg" alt="Blue summer collection">
+
+                </div>
+
+
+                <!-- Product 3 -->
+                <div class="deal-card deal-small bg-gray-100">
+
+                    <img src="/assets/deals/deal-03.jpg" alt="Women's casual collection">
+
+                </div>
+
+
+                <!-- Product 4 -->
+                <div class="deal-card deal-small bg-gray-100">
+
+                    <img src="/assets/deals/deal-04.jpg" alt="Fashion collection">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Carousel Controls -->
+        <div class="deals-arrows flex gap-2">
+
+            <button onclick="moveDeals(-1)" aria-label="Previous products"
+                class="flex h-[29px] w-[29px] items-center justify-center rounded-full bg-white text-gray-400 shadow-md transition hover:text-black">
+                ‹
+            </button>
+
+            <button onclick="moveDeals(1)" aria-label="Next products"
+                class="flex h-[29px] w-[29px] items-center justify-center rounded-full bg-white text-black shadow-md transition hover:bg-gray-100">
+                ›
+            </button>
+
+        </div>
+
+
+        <!-- Pagination Dots -->
+        <div class="deals-dots flex items-center gap-3">
+
+            <button onclick="goToDeal(0)" class="h-[13px] w-[13px] rounded-full border border-black p-[3px]">
+                <span class="block h-full w-full rounded-full bg-black"></span>
+            </button>
+
+            <button onclick="goToDeal(1)" class="h-[6px] w-[6px] rounded-full bg-gray-300"></button>
+
+            <button onclick="goToDeal(2)" class="h-[6px] w-[6px] rounded-full bg-gray-300"></button>
+
+            <button onclick="goToDeal(3)" class="h-[6px] w-[6px] rounded-full bg-gray-300"></button>
+
+        </div>
+
+    </section>
+
+
+    <script>
+        const dealsTrack = document.getElementById('dealsTrack');
+
+        function moveDeals(direction) {
+            dealsTrack.scrollBy({
+                left: direction * 235,
+                behavior: 'smooth'
+            });
+        }
+
+        function goToDeal(index) {
+            const card = dealsTrack.children[index];
+
+            dealsTrack.scrollTo({
+                left: card.offsetLeft,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+
+
+
+
 </body>
+
 </html>
