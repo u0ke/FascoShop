@@ -1,231 +1,577 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
+
     <title>FASCO - Fashion Store</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/style/style.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="site-header page-width">
-        <a class="site-logo" href="#top" aria-label="FASCO home">FASCO</a>
 
-        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
-            <a href="#top">Home</a>
-            <a href="#deals">Deals</a>
-            <a href="#deals">New Arrivals</a>
-            <a href="#deals">Packages</a>
-            <a href="#signin">Sign in</a>
-            <a class="signup-link" href="#signup">Sign Up</a>
-        </nav>
+    <!-- =================================
+         SECTION 1: HOME
+    ================================== -->
 
-        <button class="menu-toggle" id="menuToggle" type="button"
-            aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">☰</button>
-    </header>
+    <section class="page-section intro-section" id="top">
 
-    <main>
-        <!-- Section 1: Hero -->
-        <section class="hero-wrap page-width" id="top" aria-label="New collection">
+        <!-- FULL WIDTH NAVBAR -->
+
+        <header class="site-header">
+
+            <a class="site-logo" href="#top">
+                FASCO
+            </a>
+
+            <nav class="site-nav" id="siteNav">
+
+                <a href="#top">Home</a>
+                <a href="#deals">Deals</a>
+                <a href="#deals">New Arrivals</a>
+                <a href="#deals">Packages</a>
+                <a href="#signin">Sign in</a>
+
+                <a href="#signup" class="signup-link">
+                    Sign Up
+                </a>
+
+            </nav>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="siteNav"
+            >
+                ☰
+            </button>
+
+        </header>
+
+
+        <!-- HERO -->
+
+        <main class="hero-wrap">
+
             <div class="hero-grid">
+
+                <!-- LEFT IMAGE -->
+
                 <div class="side-image">
-                    <img src="/assets/home/59866250d2fc5a879ffcc793dc57565cb166bdcd.png"
-                        alt="Men's fashion collection" fetchpriority="high">
+
+                    <img
+                        src="/assets/home/59866250d2fc5a879ffcc793dc57565cb166bdcd.png"
+                        alt="Men's fashion collection"
+                    >
+
                 </div>
+
+
+                <!-- CENTER COLUMN -->
 
                 <div class="center-column">
+
+                    <!-- TOP IMAGE -->
+
                     <div class="center-image">
-                        <img src="/assets/home/63152539556c7ef09daff7f0e836524aaf0d723f.png"
-                            alt="Four models wearing the women's collection" fetchpriority="high">
+
+                        <img
+                            src="/assets/home/63152539556c7ef09daff7f0e836524aaf0d723f.png"
+                            alt="Women's fashion collection"
+                        >
+
                     </div>
+
+
+                    <!-- SALE TEXT -->
 
                     <div class="sale-content">
+
                         <h1>ULTIMATE</h1>
+
                         <p class="sale-word">SALE</p>
-                        <p class="sale-subtitle">NEW COLLECTION</p>
-                        <a class="shop-now" href="#deals">SHOP NOW</a>
+
+                        <p class="sale-subtitle">
+                            NEW COLLECTION
+                        </p>
+
+                        <a href="#deals" class="shop-now">
+                            SHOP NOW
+                        </a>
+
                     </div>
+
+
+                    <!-- BOTTOM IMAGE -->
 
                     <div class="center-image">
-                        <img src="/assets/home/c6ed7b8b05275d0c4f047ca38e286565bc785434.jpg"
-                            alt="Two women from the new collection" fetchpriority="high">
+
+                        <img
+                            src="/assets/home/c6ed7b8b05275d0c4f047ca38e286565bc785434.jpg"
+                            alt="Women's new collection"
+                        >
+
                     </div>
+
                 </div>
+
+
+                <!-- RIGHT IMAGE -->
 
                 <div class="side-image">
-                    <img src="/assets/home/f5c95fe473850a225b7cfa1222bf5117db038cb6.png"
-                        alt="Men's fashion collection" fetchpriority="high">
+
+                    <img
+                        src="/assets/home/f5c95fe473850a225b7cfa1222bf5117db038cb6.png"
+                        alt="Men's fashion collection"
+                    >
+
                 </div>
+
             </div>
-        </section>
 
-        <!-- Floating controls -->
-        <div class="hero-actions">
-            <button class="hero-action-button" type="button" aria-label="Shopping cart">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" aria-hidden="true">
-                    <path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 8H6"></path>
-                    <circle cx="10" cy="21" r="1"></circle>
-                    <circle cx="19" cy="21" r="1"></circle>
-                </svg>
-            </button>
-            <button class="hero-action-button back-to-top" id="backToTop" type="button"
-                aria-label="Back to top">↑</button>
-        </div>
+        </main>
 
-        <!-- Brand strip -->
-        <section class="brand-strip page-width" aria-label="Featured brands">
+
+        <!-- BRAND STRIP -->
+
+        <section class="brand-strip">
+
             <span class="brand-chanel">CHANEL</span>
+
             <span class="brand-lv">LOUIS VUITTON</span>
+
             <span class="brand-prada">PRADA</span>
+
             <span class="brand-calvin">Calvin Klein</span>
+
             <span class="brand-denim">DENIM</span>
+
         </section>
 
-        <!-- Section 2: Deals Of The Month -->
-        <section class="deals-section" id="deals" aria-labelledby="dealsTitle">
+    </section>
+
+
+    <!-- FLOATING BUTTONS -->
+
+    <div class="hero-actions">
+
+        <button class="hero-action-button" type="button" aria-label="Shopping cart">
+
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 8H6"/>
+                <circle cx="10" cy="21" r="1"/>
+                <circle cx="19" cy="21" r="1"/>
+            </svg>
+
+        </button>
+
+        <button
+            class="hero-action-button back-to-top"
+            id="backToTop"
+            type="button"
+            aria-label="Back to top"
+        >
+            ↑
+        </button>
+
+    </div>
+
+
+    <!-- =================================
+         SECTION 2: DEALS
+    ================================== -->
+
+    <section class="page-section deals-section" id="deals">
+
+        <div class="deals-inner">
+
+
+            <!-- LEFT CONTENT -->
+
             <div class="deals-copy">
-                <h2 id="dealsTitle">Deals Of The Month</h2>
+
+                <h2>
+                    Deals Of The Month
+                </h2>
+
                 <p class="deals-description">
                     Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit. Scelerisque duis ultrices sollicitudin aliquam sem.
                     Scelerisque duis ultrices sollicitudin
                 </p>
-                <a class="deals-buy-button" href="#dealsProducts">Buy Now</a>
 
-                <h3 class="countdown-title">Hurry, Before It's Too Late!</h3>
-                <div class="countdown" aria-label="Sale countdown example">
+                <a href="#dealsProducts" class="deals-buy-button">
+                    Buy Now
+                </a>
+
+
+                <!-- COUNTDOWN -->
+
+                <h3 class="countdown-title">
+                    Hurry, Before It's Too Late!
+                </h3>
+
+                <div class="countdown">
+
                     <div class="countdown-item">
                         <div class="countdown-number">02</div>
                         <span class="countdown-label">Days</span>
                     </div>
+
                     <div class="countdown-item">
                         <div class="countdown-number">06</div>
                         <span class="countdown-label">Hr</span>
                     </div>
+
                     <div class="countdown-item">
                         <div class="countdown-number">05</div>
                         <span class="countdown-label">Mins</span>
                     </div>
+
                     <div class="countdown-item">
                         <div class="countdown-number">30</div>
                         <span class="countdown-label">Sec</span>
                     </div>
+
                 </div>
+
             </div>
 
-            <!-- Add your image src values to the four img elements below. -->
-            <div class="deals-carousel-window" id="dealsCarousel" aria-label="Monthly deals products">
-                <div class="deals-track" id="dealsTrack">
-                    <article class="deal-card deal-featured" id="dealsProducts">
-                        <img class="deal-photo" src="/assets/home/2cf4c9ddfc0fc0d5b9169782c021c7683d8adc84 (1).jpg" alt="Featured spring sale product">
-                        <div class="deal-discount">
-                            <p class="deal-discount-label">01 &nbsp; — &nbsp; Spring Sale</p>
-                            <p class="deal-discount-value">30% OFF</p>
-                        </div>
-                    </article>
 
-                    <article class="deal-card deal-small">
-                        <img class="deal-photo" src="/assets/home/83d537000b2c7f448254bc44ba73b56abd9515f1.jpg" alt="Second deal product">
-                    </article>
+            <!-- RIGHT PRODUCT CAROUSEL -->
 
-                    <article class="deal-card deal-small">
-                        <img class="deal-photo" src="/assets/home/d31f44a07904beb17a429736012fec61f98a52a5.jpg" alt="Third deal product">
-                    </article>
+            <div class="deals-media">
 
-                    <article class="deal-card deal-small">
-                        <img class="deal-photo" src="/assets/home/2cf4c9ddfc0fc0d5b9169782c021c7683d8adc84 (1).jpg" alt="Fourth deal product">
-                    </article>
+                <div
+                    class="deals-carousel-window"
+                    id="dealsCarousel"
+                    aria-label="Monthly deals products"
+                >
+
+                    <div class="deals-track" id="dealsTrack">
+
+
+                        <!-- PRODUCT 1: FEATURED -->
+
+                        <article
+                            class="deal-card deal-featured"
+                            id="dealsProducts"
+                        >
+
+                            <!-- Add your image src here -->
+
+                            <img
+                                class="deal-photo"
+                                alt="Featured spring sale product"
+                            >
+
+                            <div class="deal-discount">
+
+                                <p class="deal-discount-label">
+                                    01 &nbsp; — &nbsp; Spring Sale
+                                </p>
+
+                                <p class="deal-discount-value">
+                                    30% OFF
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- PRODUCT 2 -->
+
+                        <article class="deal-card deal-small">
+
+                            <!-- Add your image src here -->
+
+                            <img
+                                class="deal-photo"
+                                alt="Second deal product"
+                            >
+
+                        </article>
+
+
+                        <!-- PRODUCT 3 -->
+
+                        <article class="deal-card deal-small">
+
+                            <!-- Add your image src here -->
+
+                            <img
+                                class="deal-photo"
+                                alt="Third deal product"
+                            >
+
+                        </article>
+
+
+                        <!-- PRODUCT 4 -->
+
+                        <article class="deal-card deal-small">
+
+                            <!-- Add your image src here -->
+
+                            <img
+                                class="deal-photo"
+                                alt="Fourth deal product"
+                            >
+
+                        </article>
+
+                    </div>
+
                 </div>
+
+
+                <!-- CAROUSEL CONTROLS -->
+
+                <div class="deals-controls">
+
+                    <div class="deals-arrows">
+
+                        <button
+                            class="deals-arrow"
+                            id="dealsPrev"
+                            type="button"
+                            aria-label="Previous products"
+                        >
+                            ‹
+                        </button>
+
+                        <button
+                            class="deals-arrow"
+                            id="dealsNext"
+                            type="button"
+                            aria-label="Next products"
+                        >
+                            ›
+                        </button>
+
+                    </div>
+
+
+                    <div class="deals-dots">
+
+                        <button
+                            class="deals-dot"
+                            data-deal-dot="0"
+                            aria-label="Go to deal 1"
+                            aria-current="true"
+                            type="button"
+                        ></button>
+
+                        <button
+                            class="deals-dot"
+                            data-deal-dot="1"
+                            aria-label="Go to deal 2"
+                            aria-current="false"
+                            type="button"
+                        ></button>
+
+                        <button
+                            class="deals-dot"
+                            data-deal-dot="2"
+                            aria-label="Go to deal 3"
+                            aria-current="false"
+                            type="button"
+                        ></button>
+
+                        <button
+                            class="deals-dot"
+                            data-deal-dot="3"
+                            aria-label="Go to deal 4"
+                            aria-current="false"
+                            type="button"
+                        ></button>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="deals-controls">
-                <div class="deals-arrows">
-                    <button class="deals-arrow" id="dealsPrev" type="button" aria-label="Previous products">‹</button>
-                    <button class="deals-arrow" id="dealsNext" type="button" aria-label="Next products">›</button>
-                </div>
+        </div>
 
-                <div class="deals-dots" aria-label="Choose a deal">
-                    <button class="deals-dot" type="button" data-deal-dot="0" aria-label="Go to deal 1" aria-current="true"></button>
-                    <button class="deals-dot" type="button" data-deal-dot="1" aria-label="Go to deal 2" aria-current="false"></button>
-                    <button class="deals-dot" type="button" data-deal-dot="2" aria-label="Go to deal 3" aria-current="false"></button>
-                    <button class="deals-dot" type="button" data-deal-dot="3" aria-label="Go to deal 4" aria-current="false"></button>
-                </div>
-            </div>
-        </section>
-    </main>
+    </section>
 
     <script>
+
+        // MOBILE NAVIGATION
+
         const menuToggle = document.getElementById("menuToggle");
         const siteNav = document.getElementById("siteNav");
-        const backToTop = document.getElementById("backToTop");
-        const dealsCarousel = document.getElementById("dealsCarousel");
-        const dealsTrack = document.getElementById("dealsTrack");
-        const dealCards = Array.from(dealsTrack.querySelectorAll(".deal-card"));
-        const dealDots = Array.from(document.querySelectorAll("[data-deal-dot]"));
-        const dealsPrev = document.getElementById("dealsPrev");
-        const dealsNext = document.getElementById("dealsNext");
 
         menuToggle.addEventListener("click", () => {
+
             const isOpen = siteNav.classList.toggle("is-open");
-            menuToggle.setAttribute("aria-expanded", String(isOpen));
-            menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close menu" : "Open menu"
+            );
+
         });
 
-        siteNav.querySelectorAll("a").forEach((link) => {
+
+        // CLOSE MOBILE MENU AFTER CLICK
+
+        siteNav.querySelectorAll("a").forEach(link => {
+
             link.addEventListener("click", () => {
+
                 siteNav.classList.remove("is-open");
+
                 menuToggle.setAttribute("aria-expanded", "false");
-                menuToggle.setAttribute("aria-label", "Open menu");
+
             });
+
         });
 
-        backToTop.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
+
+        // BACK TO TOP
+
+        document.getElementById("backToTop").addEventListener("click", () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
         });
 
-        function scrollToDeal(index) {
+
+        // DEALS CAROUSEL
+
+        const dealsCarousel = document.getElementById("dealsCarousel");
+
+        const dealCards = [
+            ...document.querySelectorAll(".deal-card")
+        ];
+
+        const dealDots = [
+            ...document.querySelectorAll(".deals-dot")
+        ];
+
+
+        // MOVE TO PREVIOUS PRODUCT
+
+        document.getElementById("dealsPrev").addEventListener("click", () => {
+
+            dealsCarousel.scrollBy({
+                left: -235,
+                behavior: "smooth"
+            });
+
+        });
+
+
+        // MOVE TO NEXT PRODUCT
+
+        document.getElementById("dealsNext").addEventListener("click", () => {
+
+            dealsCarousel.scrollBy({
+                left: 235,
+                behavior: "smooth"
+            });
+
+        });
+
+
+        // PAGINATION DOTS
+
+        function goToDeal(index) {
+
             const card = dealCards[index];
+
             if (!card) return;
 
             dealsCarousel.scrollTo({
                 left: card.offsetLeft,
                 behavior: "smooth"
             });
+
         }
 
-        function updateDealDots() {
-            const maxScroll = dealsCarousel.scrollWidth - dealsCarousel.clientWidth;
-            const progress = maxScroll > 0 ? dealsCarousel.scrollLeft / maxScroll : 0;
-            const activeIndex = Math.round(progress * (dealDots.length - 1));
-
-            dealDots.forEach((dot, index) => {
-                dot.setAttribute("aria-current", String(index === activeIndex));
-            });
-        }
-
-        dealsPrev.addEventListener("click", () => {
-            dealsCarousel.scrollBy({ left: -235, behavior: "smooth" });
-        });
-
-        dealsNext.addEventListener("click", () => {
-            dealsCarousel.scrollBy({ left: 235, behavior: "smooth" });
-        });
 
         dealDots.forEach((dot, index) => {
-            dot.addEventListener("click", () => scrollToDeal(index));
+
+            dot.addEventListener("click", () => {
+
+                goToDeal(index);
+
+            });
+
         });
 
-        dealsCarousel.addEventListener("scroll", updateDealDots, { passive: true });
-        window.addEventListener("resize", updateDealDots);
-        updateDealDots();
+
+        // UPDATE ACTIVE DOT WHILE SCROLLING
+
+        function updateDots() {
+
+            const scrollPosition = dealsCarousel.scrollLeft;
+
+            let activeIndex = 0;
+            let closestDistance = Infinity;
+
+            dealCards.forEach((card, index) => {
+
+                const distance = Math.abs(
+                    card.offsetLeft - scrollPosition
+                );
+
+                if (distance < closestDistance) {
+
+                    closestDistance = distance;
+                    activeIndex = index;
+
+                }
+
+            });
+
+            dealDots.forEach((dot, index) => {
+
+                dot.setAttribute(
+                    "aria-current",
+                    index === activeIndex ? "true" : "false"
+                );
+
+            });
+
+        }
+
+
+        dealsCarousel.addEventListener("scroll", updateDots, {
+            passive: true
+        });
+
+
+        window.addEventListener("resize", updateDots);
+
     </script>
+
 </body>
 </html>

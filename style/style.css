@@ -1,58 +1,89 @@
-       :root {
-            --page-width: 704px;
+        :root {
             --text: #454545;
-            --muted: #929292;
             --black: #050505;
-            --soft-gray: #e0e0e0;
+            --gray: #e0e0e0;
+            --page-padding: clamp(24px, 5vw, 88px);
+            --deal-height: clamp(380px, 58vh, 560px);
         }
 
-        * { box-sizing: border-box; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 24px;
+            scroll-snap-type: y mandatory;
+            scroll-padding-top: 0;
         }
 
         body {
-            margin: 0;
-            background: #fff;
+            background: white;
             color: var(--text);
             font-family: "Montserrat", sans-serif;
             overflow-x: hidden;
         }
 
-        a { color: inherit; text-decoration: none; }
-        button { font: inherit; }
-
-        .page-width {
-            width: min(var(--page-width), calc(100% - 40px));
-            margin-inline: auto;
+        a {
+            color: inherit;
+            text-decoration: none;
         }
 
-        /* Header */
+        button {
+            font: inherit;
+        }
+
+        /* ==============================
+           FULL SCREEN SECTIONS
+        ============================== */
+
+        .page-section {
+            min-height: 100svh;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            position: relative;
+        }
+
+        /* ==============================
+           HEADER / NAVBAR
+        ============================== */
+
+        .intro-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 15px;
+        }
+
         .site-header {
-            min-height: 96px;
+            width: 100%;
+            min-height: 95px;
+            padding: 0 var(--page-padding);
+
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-block: 24px;
+
             position: relative;
-            z-index: 5;
+            z-index: 20;
         }
 
         .site-logo {
             font-family: Georgia, "Times New Roman", serif;
-            font-size: 28px;
-            line-height: 1;
+            font-size: 32px;
             font-weight: 700;
             letter-spacing: -1px;
+            white-space: nowrap;
         }
 
         .site-nav {
             display: flex;
             align-items: center;
-            gap: 31px;
-            font-size: 9px;
+            justify-content: flex-end;
+            gap: clamp(20px, 2.5vw, 42px);
+
+            font-size: 12px;
             white-space: nowrap;
         }
 
@@ -60,7 +91,9 @@
             transition: color .2s ease;
         }
 
-        .site-nav a:not(.signup-link):hover { color: #999; }
+        .site-nav a:not(.signup-link):hover {
+            color: #999;
+        }
 
         .signup-link,
         .shop-now,
@@ -68,54 +101,68 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            color: #fff;
+
             background: var(--black);
+            color: white;
+
             border-radius: 6px;
             box-shadow: 0 8px 18px rgba(0,0,0,.14);
-            transition: background .2s ease, transform .2s ease;
+
+            transition: .2s ease;
         }
 
         .signup-link:hover,
         .shop-now:hover,
         .deals-buy-button:hover {
             background: #333;
-            transform: translateY(-1px);
+            transform: translateY(-2px);
         }
 
         .signup-link {
-            min-width: 84px;
-            height: 31px;
-            padding-inline: 17px;
+            min-width: 100px;
+            height: 42px;
+            padding: 0 22px;
         }
 
         .menu-toggle {
             display: none;
-            width: 38px;
-            height: 38px;
-            border: 0;
+            border: none;
             background: transparent;
-            color: #111;
-            font-size: 25px;
+            font-size: 27px;
             cursor: pointer;
         }
 
-        /* Section 1: Hero */
+        /* ==============================
+           SECTION 1 - HERO
+        ============================== */
+
         .hero-wrap {
-            position: relative;
+            width: 100%;
+            flex: 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 15px var(--page-padding);
         }
 
         .hero-grid {
+            width: 100%;
+            max-width: 1500px;
+
             display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr) minmax(0, 1fr);
-            gap: 19px;
-            height: 416px;
+            grid-template-columns: 1fr 1.08fr 1fr;
+            gap: clamp(14px, 1.5vw, 24px);
+
+            height: clamp(420px, 60vh, 620px);
         }
 
         .side-image {
-            height: 416px;
+            height: 100%;
             overflow: hidden;
-            border-radius: 6px;
-            background: var(--soft-gray);
+            border-radius: 8px;
+            background: var(--gray);
         }
 
         .side-image img {
@@ -123,20 +170,25 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center center;
+            object-position: center;
         }
 
         .center-column {
             min-width: 0;
+
             display: grid;
-            grid-template-rows: 83px minmax(0, 1fr) 83px;
-            gap: 12px;
+            grid-template-rows:
+                clamp(90px, 13vh, 125px)
+                minmax(0, 1fr)
+                clamp(90px, 13vh, 125px);
+
+            gap: clamp(12px, 1.5vw, 20px);
         }
 
         .center-image {
             min-width: 0;
             overflow: hidden;
-            border-radius: 6px;
+            border-radius: 8px;
             background: #e4e4e4;
         }
 
@@ -148,241 +200,294 @@
             object-position: center 18%;
         }
 
+        /* Sale typography */
+
         .sale-content {
             min-height: 0;
+
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
             text-align: center;
         }
 
         .sale-content h1 {
-            margin: 0;
-            font-size: 48px;
+            font-size: clamp(42px, 4.2vw, 68px);
             line-height: 1;
             font-weight: 600;
-            letter-spacing: -1.8px;
+            letter-spacing: -2px;
             white-space: nowrap;
         }
 
         .sale-word {
-            margin: 5px 0 0;
+            margin-top: 5px;
+
             color: transparent;
             -webkit-text-stroke: 1px #777;
-            font-size: 88px;
+
+            font-size: clamp(85px, 8vw, 135px);
             font-weight: 400;
-            line-height: .96;
-            letter-spacing: -4px;
+            line-height: .95;
+            letter-spacing: -5px;
             white-space: nowrap;
         }
 
         .sale-subtitle {
-            margin: 8px 0 0;
-            font-size: 10px;
+            margin-top: 12px;
+            font-size: clamp(10px, .85vw, 13px);
             font-weight: 500;
             letter-spacing: 2px;
         }
 
         .shop-now {
-            min-width: 114px;
-            height: 31px;
-            margin-top: 12px;
-            padding-inline: 20px;
-            font-size: 9px;
+            min-width: 140px;
+            height: 42px;
+            margin-top: 18px;
+            padding: 0 24px;
+
+            font-size: 11px;
             font-weight: 600;
         }
 
+        /* ==============================
+           FLOATING BUTTONS
+        ============================== */
+
         .hero-actions {
             position: fixed;
-            right: max(20px, calc((100vw - 704px) / 2 - 152px));
-            bottom: 30px;
-            z-index: 10;
+            right: 28px;
+            bottom: 28px;
+            z-index: 30;
+
             display: flex;
             align-items: center;
             gap: 18px;
         }
 
         .hero-action-button {
-            display: inline-flex;
-            width: 32px;
-            height: 32px;
+            width: 42px;
+            height: 42px;
+
+            display: flex;
             align-items: center;
             justify-content: center;
-            border: 0;
-            border-radius: 7px;
-            background: #050505;
+
+            border: none;
+            border-radius: 8px;
+
+            background: black;
             color: white;
-            box-shadow: 0 5px 14px rgba(0,0,0,.16);
+            box-shadow: 0 5px 14px rgba(0,0,0,.15);
+
             cursor: pointer;
         }
 
         .back-to-top {
             border: 1px solid #aaa;
             border-radius: 50%;
-            background: #fff;
-            color: #111;
+            background: white;
+            color: black;
             box-shadow: none;
-            font-size: 17px;
+            font-size: 21px;
         }
 
-        /* Brand strip */
+        /* ==============================
+           BRAND STRIP
+        ============================== */
+
         .brand-strip {
-            min-height: 82px;
-            margin-top: 25px;
-            padding-block: 17px 30px;
+            width: min(1500px, calc(100% - 2 * var(--page-padding)));
+            min-height: 90px;
+            margin: 0 auto;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 18px;
+            gap: 25px;
+
             color: #050505;
             border-bottom: 1px solid #f0f0f0;
         }
 
         .brand-chanel {
-            font-size: 21px;
+            font-size: clamp(18px, 1.5vw, 25px);
             font-weight: 700;
             letter-spacing: 2px;
         }
 
         .brand-lv {
-            font-size: 11px;
+            font-size: clamp(10px, .9vw, 13px);
             font-weight: 600;
             letter-spacing: 1px;
-            white-space: nowrap;
         }
 
         .brand-prada {
             font-family: Georgia, "Times New Roman", serif;
-            font-size: 27px;
+            font-size: clamp(23px, 2vw, 32px);
             font-weight: 900;
-            letter-spacing: 1px;
         }
 
         .brand-calvin {
-            font-size: 20px;
+            font-size: clamp(17px, 1.4vw, 23px);
             font-weight: 500;
             letter-spacing: -1px;
-            white-space: nowrap;
         }
 
         .brand-denim {
-            font-size: 21px;
+            font-size: clamp(18px, 1.5vw, 25px);
             font-weight: 800;
             letter-spacing: -1px;
         }
 
-        /* Section 2: Deals of the Month */
+        /* ==============================
+           SECTION 2 - DEALS OF THE MONTH
+        ============================== */
+
         .deals-section {
-            position: relative;
-            width: min(var(--page-width), calc(100% - 40px));
-            height: 320px;
-            margin: 82px auto 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 60px var(--page-padding);
         }
 
+        .deals-inner {
+            width: 100%;
+            max-width: 1500px;
+
+            display: grid;
+            grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+            align-items: center;
+
+            gap: clamp(40px, 5vw, 85px);
+        }
+
+        /* Left content */
+
         .deals-copy {
-            width: 247px;
+            width: 100%;
         }
 
         .deals-copy h2 {
-            margin: 0;
             font-family: Georgia, "Times New Roman", serif;
-            font-size: 27px;
+            font-size: clamp(28px, 2.3vw, 39px);
             line-height: 1.15;
             font-weight: 600;
-            letter-spacing: -.4px;
         }
 
         .deals-description {
-            margin: 14px 0 0;
+            margin-top: 18px;
+
+            max-width: 330px;
+
             color: #999;
-            font-size: 9px;
-            line-height: 15px;
+            font-size: 11px;
+            line-height: 1.8;
         }
 
         .deals-buy-button {
-            width: 114px;
-            height: 31px;
-            margin-top: 21px;
-            font-size: 9px;
+            width: 130px;
+            height: 42px;
+            margin-top: 25px;
+
+            font-size: 11px;
         }
 
         .countdown-title {
-            margin: 28px 0 0;
-            font-size: 16px;
-            line-height: 1.2;
+            margin-top: 35px;
+            font-size: clamp(16px, 1.3vw, 21px);
             font-weight: 600;
         }
 
         .countdown {
             display: flex;
             gap: 13px;
-            margin-top: 10px;
+            margin-top: 14px;
         }
 
         .countdown-item {
-            width: 43px;
+            width: 55px;
             text-align: center;
         }
 
         .countdown-number {
-            width: 43px;
-            height: 43px;
+            width: 55px;
+            height: 55px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             border-radius: 8px;
-            background: #fff;
+            background: white;
             box-shadow: 0 3px 12px rgba(0,0,0,.13);
+
             font-family: "Orbitron", monospace;
-            font-size: 21px;
-            font-weight: 400;
+            font-size: 23px;
         }
 
         .countdown-label {
             display: block;
-            margin-top: 8px;
-            font-size: 13px;
+            margin-top: 9px;
+            font-size: 14px;
         }
 
-        /* Fixed design-width viewport: matches the reference's two full cards
-           and a clipped third card instead of displaying all four at once. */
+        /* Product carousel */
+
+        .deals-media {
+            width: 100%;
+            min-width: 0;
+            position: relative;
+        }
+
         .deals-carousel-window {
-            position: absolute;
-            top: 0;
-            left: 311px;
-            width: 567px;
-            height: 320px;
-            overflow: hidden;
+            width: clamp(560px, 45vw, 730px);
+            max-width: 100%;
+
+            height: var(--deal-height);
+
+            overflow-x: auto;
+            overflow-y: hidden;
+
             scrollbar-width: none;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
         }
 
-        .deals-carousel-window::-webkit-scrollbar { display: none; }
+        .deals-carousel-window::-webkit-scrollbar {
+            display: none;
+        }
 
         .deals-track {
+            width: max-content;
+            height: 100%;
+
             display: flex;
             align-items: flex-start;
-            gap: 13px;
-            width: max-content;
-            height: 320px;
+            gap: 16px;
         }
 
         .deal-card {
             position: relative;
             flex: 0 0 auto;
             display: block;
+
             overflow: hidden;
             background: #dedbd3;
+
+            scroll-snap-align: start;
         }
 
         .deal-featured {
-            width: 222px;
-            height: 320px;
+            width: clamp(220px, 17vw, 280px);
+            height: var(--deal-height);
         }
 
         .deal-small {
-            width: 204px;
-            height: 267px;
+            width: clamp(200px, 15vw, 245px);
+            height: calc(var(--deal-height) - 50px);
             background: #e8e8ed;
         }
 
@@ -390,85 +495,107 @@
             display: block;
             width: 100%;
             height: 100%;
+
             object-fit: cover;
             object-position: center top;
         }
 
+        /* Hide empty image elements until you add an image src */
+        .deal-photo:not([src]),
+        .deal-photo[src=""] {
+            visibility: hidden;
+        }
+
+        /* Discount label */
+
         .deal-discount {
             position: absolute;
-            left: 13px;
-            bottom: 14px;
-            width: 119px;
-            min-height: 71px;
-            padding: 13px 14px;
-            background: #fff;
-            box-shadow: 0 2px 8px rgba(0,0,0,.05);
+            bottom: 18px;
+            left: 16px;
+
+            width: 145px;
+            min-height: 85px;
+
+            padding: 15px;
+            background: white;
         }
 
         .deal-discount-label {
-            margin: 0;
             color: #777;
-            font-size: 8px;
-            white-space: nowrap;
+            font-size: 10px;
         }
 
         .deal-discount-value {
-            margin: 6px 0 0;
-            font-size: 16px;
+            margin-top: 7px;
+            font-size: 20px;
             font-weight: 500;
         }
 
-        .deals-arrows {
-            position: absolute;
-            left: 236px;
-            bottom: 0;
+        /* Carousel controls */
+
+        .deals-controls {
             display: flex;
-            gap: 9px;
+            align-items: center;
+            justify-content: space-between;
+
+            width: 100%;
+            margin-top: 16px;
+        }
+
+        .deals-arrows {
+            display: flex;
+            gap: 12px;
         }
 
         .deals-arrow {
+            width: 40px;
+            height: 40px;
+
             display: flex;
-            width: 29px;
-            height: 29px;
             align-items: center;
             justify-content: center;
-            border: 0;
+
+            border: none;
             border-radius: 50%;
-            background: #fff;
-            color: #111;
+
+            background: white;
+            color: black;
             box-shadow: 0 2px 9px rgba(0,0,0,.15);
-            font-size: 20px;
-            line-height: 1;
+
+            font-size: 24px;
             cursor: pointer;
+            transition: .2s ease;
         }
 
-        .deals-arrow:first-child { color: #aaa; }
+        .deals-arrow:hover {
+            background: #f2f2f2;
+        }
 
         .deals-dots {
-            position: absolute;
-            left: 546px;
-            bottom: 5px;
             display: flex;
             align-items: center;
-            gap: 11px;
+            gap: 12px;
         }
 
         .deals-dot {
-            width: 6px;
-            height: 6px;
+            width: 8px;
+            height: 8px;
             padding: 0;
-            border: 0;
+
+            border: none;
             border-radius: 50%;
             background: #bbb;
+
             cursor: pointer;
         }
 
         .deals-dot[aria-current="true"] {
-            width: 14px;
-            height: 14px;
-            border: 1px solid #111;
-            background: #fff;
+            width: 16px;
+            height: 16px;
+
             position: relative;
+            border: 1px solid black;
+            background: white;
         }
 
         .deals-dot[aria-current="true"]::after {
@@ -476,34 +603,114 @@
             position: absolute;
             inset: 3px;
             border-radius: 50%;
-            background: #111;
+            background: black;
         }
 
-        /* Tablet and mobile */
-        @media (max-width: 760px) {
-            .site-header { min-height: 78px; }
+        /* ==============================
+           MEDIUM SCREENS
+        ============================== */
 
-            .menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+        @media (max-width: 1050px) and (min-width: 761px) {
+
+            :root {
+                --page-padding: 35px;
+            }
+
+            .site-nav {
+                gap: 17px;
+                font-size: 10px;
+            }
+
+            .hero-grid {
+                gap: 12px;
+            }
+
+            .sale-content h1 {
+                font-size: 39px;
+            }
+
+            .sale-word {
+                font-size: 78px;
+            }
+
+            .deals-inner {
+                grid-template-columns: 240px minmax(0, 1fr);
+                gap: 35px;
+            }
+
+            .deals-carousel-window {
+                width: 560px;
+            }
+        }
+
+        /* ==============================
+           MOBILE / TABLET
+        ============================== */
+
+        @media (max-width: 760px) {
+
+            html {
+                scroll-snap-type: y proximity;
+            }
+
+            .page-section {
+                min-height: auto;
+            }
+
+            .intro-section {
+                min-height: 100svh;
+            }
+
+            .site-header {
+                min-height: 78px;
+            }
+
+            .site-logo {
+                font-size: 27px;
+            }
+
+            .menu-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
             .site-nav {
                 display: none;
+
                 position: absolute;
-                top: 67px;
-                right: 0;
-                width: min(260px, calc(100vw - 40px));
-                padding: 20px;
+                top: 68px;
+                right: 20px;
+
+                width: min(270px, calc(100vw - 40px));
+                padding: 22px;
+
                 flex-direction: column;
                 align-items: stretch;
-                gap: 18px;
+                gap: 19px;
+
                 border: 1px solid #eee;
                 border-radius: 10px;
-                background: #fff;
+                background: white;
+
                 box-shadow: 0 12px 30px rgba(0,0,0,.1);
                 font-size: 13px;
             }
 
-            .site-nav.is-open { display: flex; }
-            .signup-link { width: 100%; }
+            .site-nav.is-open {
+                display: flex;
+            }
+
+            .signup-link {
+                width: 100%;
+            }
+
+            /* Hero */
+
+            .hero-wrap {
+                flex: initial;
+                padding: 15px 20px;
+            }
 
             .hero-grid {
                 height: auto;
@@ -514,77 +721,143 @@
             .center-column {
                 grid-column: 1 / -1;
                 grid-row: 1;
-                grid-template-rows: 100px minmax(210px, auto) 100px;
+
+                grid-template-rows: 95px minmax(220px, auto) 95px;
                 gap: 12px;
             }
 
-            .side-image { height: 350px; }
-            .sale-content h1 { font-size: clamp(38px, 9vw, 48px); }
-            .sale-word { font-size: clamp(72px, 17vw, 88px); }
-
-            .hero-actions {
-                right: 16px;
-                bottom: 16px;
+            .side-image {
+                height: 350px;
             }
+
+            .sale-content h1 {
+                font-size: clamp(38px, 8vw, 52px);
+            }
+
+            .sale-word {
+                font-size: clamp(75px, 16vw, 100px);
+            }
+
+            /* Brands */
 
             .brand-strip {
+                width: calc(100% - 40px);
+                min-height: 100px;
+
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 18px 26px;
-                margin-top: 28px;
+                gap: 20px 26px;
+
+                padding: 20px 0;
             }
 
-            .brand-chanel, .brand-denim { font-size: 18px; }
-            .brand-lv { font-size: 10px; }
-            .brand-prada { font-size: 23px; }
-            .brand-calvin { font-size: 17px; }
+            .brand-chanel,
+            .brand-denim {
+                font-size: 18px;
+            }
+
+            .brand-lv {
+                font-size: 10px;
+            }
+
+            .brand-prada {
+                font-size: 23px;
+            }
+
+            .brand-calvin {
+                font-size: 17px;
+            }
+
+            /* Deals */
 
             .deals-section {
-                height: auto;
-                margin-top: 65px;
-                margin-bottom: 70px;
+                padding: 65px 20px 80px;
             }
 
-            .deals-copy { width: 100%; max-width: 330px; }
+            .deals-inner {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .deals-copy {
+                max-width: 380px;
+            }
+
+            .deals-copy h2 {
+                font-size: 30px;
+            }
+
             .deals-carousel-window {
-                position: relative;
-                top: auto;
-                left: auto;
                 width: 100%;
-                height: 320px;
-                margin-top: 30px;
-                overflow-x: auto;
-                overflow-y: hidden;
-                scroll-snap-type: x mandatory;
+                max-width: 100%;
+                height: 400px;
             }
 
-            .deal-card { scroll-snap-align: start; }
+            .deal-featured {
+                width: 220px;
+                height: 400px;
+            }
+
+            .deal-small {
+                width: 200px;
+                height: 350px;
+            }
+
             .deals-controls {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
                 margin-top: 18px;
             }
 
-            .deals-arrows, .deals-dots {
-                position: static;
+            .hero-actions {
+                right: 15px;
+                bottom: 15px;
+                gap: 10px;
+            }
+
+            .hero-action-button {
+                width: 36px;
+                height: 36px;
             }
         }
 
         @media (max-width: 420px) {
-            .hero-grid { gap: 9px; }
-            .side-image { height: 280px; }
-            .center-column { grid-template-rows: 82px minmax(190px, auto) 82px; }
-            .sale-content h1 { font-size: 34px; }
-            .sale-word { font-size: 70px; }
-            .sale-subtitle { font-size: 8px; }
-            .shop-now { margin-top: 9px; }
-            .brand-strip { gap: 15px 20px; }
-            .countdown { gap: 9px; }
-            .countdown-item, .countdown-number { width: 40px; }
-            .countdown-number { height: 40px; font-size: 19px; }
-        }
 
-        @media (min-width: 761px) {
-            .deals-controls { display: contents; }
+            .side-image {
+                height: 280px;
+            }
+
+            .center-column {
+                grid-template-rows: 78px minmax(190px, auto) 78px;
+            }
+
+            .sale-content h1 {
+                font-size: 34px;
+            }
+
+            .sale-word {
+                font-size: 70px;
+            }
+
+            .sale-subtitle {
+                font-size: 8px;
+            }
+
+            .shop-now {
+                height: 34px;
+                min-width: 115px;
+                margin-top: 10px;
+            }
+
+            .countdown {
+                gap: 9px;
+            }
+
+            .countdown-item,
+            .countdown-number {
+                width: 43px;
+            }
+
+            .countdown-number {
+                height: 43px;
+                font-size: 19px;
+            }
         }
